@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# React To-Do Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple To-Do application built using React.js, Redux for state
+management, and Tailwind CSS for styling.
 
-## Available Scripts
+![React To-Do Application Demo](demo.gif)
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Dependencies](#dependencies)
+- [Scripts](#scripts)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+This project is a basic To-Do application developed with React.js, showcasing
+fundamental concepts such as component-based architecture, state management with
+Redux, and responsive design using Tailwind CSS. Users can add, view, edit, mark
+as completed, and delete tasks.
+
+## Features
+
+- **Add Task**: Input new tasks and add them to the list.
+- **View Tasks**: Display all added tasks in a list format.
+- **Edit Task**: Modify existing tasks directly from the task list.
+- **Delete Task**: Remove tasks from the list.
+- **Mark as Completed**: Toggle tasks between completed and incomplete states.
+- **Persistent Storage**: Tasks are saved locally using browser storage
+  (localStorage), ensuring data persistence on page reload.
+- **Responsive Design**: Fully responsive design for optimal viewing on various
+  devices.
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/cod3-assassin/react-todo-app.git
+   cd react-todo-app
+   ```
+
+2. **Install Node.js and npm:**
+
+   Ensure you have Node.js and npm installed on your machine. You can download
+   them from [nodejs.org](https://nodejs.org/).
+
+3. **Install project dependencies:**
+
+   After cloning the repository and navigating to the project directory, install
+   dependencies using npm:
+
+   ```bash
+   npm install
+   npm install redux react-redux
+   npm install react-icons
+
+   ```
+
+   This will install all required dependencies listed in `package.json`,
+   including development dependencies for Tailwind CSS setup.
+
+   ```bash
+   npm install -D tailwindcss
+   npx tailwindcss init
+
+   ```
+
+## Usage
+
+To start the development server and view the application in your browser:
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Folder Structure
+
+The project structure follows a standard React application structure with
+additional folders for Redux state management, custom hooks, and styling:
+
+```
+/react-todo-app
+|-- /public
+|   |-- index.html
+|   |-- favicon.ico
+|-- /src
+|   |-- /components
+|   |   |-- /Task
+|   |       |-- TaskInput.jsx
+|   |       |-- TaskList.jsx
+|   |       |-- TaskItem.jsx
+|   |-- /redux
+|   |   |-- actions.js
+|   |   |-- reducers.js
+|   |   |-- store.js
+|   |-- /hooks
+|   |   |-- useTaskManager.js
+|   |-- /utils
+|   |   |-- storage.js
+|   |-- App.js
+|   |-- index.js
+|   |-- index.css
+|-- package.json
+|-- README.md
+```
+
+## Dependencies
+
+- `@testing-library/jest-dom`, `@testing-library/react`,
+  `@testing-library/user-event`: Testing utilities for React components.
+- `react`, `react-dom`: Core React library and DOM rendering.
+- `react-icons`: Icons for UI elements.
+- `react-redux`: Official Redux bindings for React.
+- `react-scripts`: Scripts and configurations for React applications.
+- `redux`: Predictable state container for JavaScript apps.
+- `web-vitals`: Library for measuring web vitals performance metrics.
+- `tailwindcss`: Utility-first CSS framework for styling.
+
+## Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- `npm start`: Runs the app in development mode. Open
+  [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `npm test`: Launches the test runner in interactive watch mode.
+- `npm run build`: Builds the app for production to the `build` folder.
+- `npm run eject`: Ejects the project configuration for full control over
+  configuration files and dependencies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contributing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Pull requests are welcome. For major changes, please open an issue first to
+discuss what you would like to change.
 
-### `npm test`
+Please make sure to update tests as appropriate.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
